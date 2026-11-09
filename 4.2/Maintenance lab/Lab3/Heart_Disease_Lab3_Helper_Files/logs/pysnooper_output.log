@@ -1,0 +1,54 @@
+Source path:... lab3_heart_disease_tools.py
+Starting var:.. model = LogisticRegression(max_iter=1000)
+                call       122 def predict_sample(model):
+                line       127     input_data = (62, 0, 0, 140, 268, 0, 0, 160, 0, 3.6, 0, 2, 2)
+New var:....... input_data = (62, 0, 0, 140, 268, 0, 0, 160, 0, 3.6, 0, 2, 2)
+                line       130     input_data_as_numpy_array = np.asarray(input_data)
+New var:....... input_data_as_numpy_array = array([ 62. ,   0. ,   0. , 140. , 268. ,   0. ,... 160. ,   0. ,         3.6,   0. ,   2. ,   2. ])
+                line       133     input_data_reshaped = input_data_as_numpy_array.reshape(1, -1)
+New var:....... input_data_reshaped = array([[ 62. ,   0. ,   0. , 140. , 268. ,   0. ...60. ,   0. ,          3.6,   0. ,   2. ,   2. ]])
+                line       135     prediction = model.predict(input_data_reshaped)
+New var:....... prediction = array([0])
+                line       137     if prediction[0] == 0:
+                line       138         result = "The Person does not have a Heart Disease"
+New var:....... result = 'The Person does not have a Heart Disease'
+                line       142     return prediction, result
+                return     142     return prediction, result
+Return value:.. (array([0]), 'The Person does not have a Heart Disease')
+Elapsed time: 00:00:00.031874
+Source path:... lab3_heart_disease_tools.py
+Starting var:.. model = LogisticRegression(max_iter=1000)
+                call       122 def predict_sample(model):
+                line       127     input_data = (62, 0, 0, 140, 268, 0, 0, 160, 0, 3.6, 0, 2, 2)
+New var:....... input_data = (62, 0, 0, 140, 268, 0, 0, 160, 0, 3.6, 0, 2, 2)
+                line       130     input_data_as_numpy_array = np.asarray(input_data)
+New var:....... input_data_as_numpy_array = array([ 62. ,   0. ,   0. , 140. , 268. ,   0. ,... 160. ,   0. ,         3.6,   0. ,   2. ,   2. ])
+                line       133     input_data_reshaped = input_data_as_numpy_array.reshape(1, -1)
+New var:....... input_data_reshaped = array([[ 62. ,   0. ,   0. , 140. , 268. ,   0. ...60. ,   0. ,          3.6,   0. ,   2. ,   2. ]])
+                line       135     prediction = model.predict(input_data_reshaped)
+New var:....... prediction = array([0])
+                line       137     if prediction[0] == 0:
+                line       138         result = "The Person does not have a Heart Disease"
+New var:....... result = 'The Person does not have a Heart Disease'
+                line       142     return prediction, result
+                return     142     return prediction, result
+Return value:.. (array([0]), 'The Person does not have a Heart Disease')
+Elapsed time: 00:00:00.014835
+Source path:... lab3_heart_disease_tools.py
+Starting var:.. model = LogisticRegression(max_iter=1000)
+                call       122 def predict_sample(model):
+                line       127     input_data = (62, 0, 0, 140, 268, 0, 0, 160, 0, 3.6, 0, 2, 2)
+New var:....... input_data = (62, 0, 0, 140, 268, 0, 0, 160, 0, 3.6, 0, 2, 2)
+                line       130     input_data_as_numpy_array = np.asarray(input_data)
+New var:....... input_data_as_numpy_array = array([ 62. ,   0. ,   0. , 140. , 268. ,   0. ,... 160. ,   0. ,         3.6,   0. ,   2. ,   2. ])
+                line       133     input_data_reshaped = input_data_as_numpy_array.reshape(1, -1)
+New var:....... input_data_reshaped = array([[ 62. ,   0. ,   0. , 140. , 268. ,   0. ...60. ,   0. ,          3.6,   0. ,   2. ,   2. ]])
+                line       135     prediction = model.predict(input_data_reshaped)
+New var:....... prediction = array([0])
+                line       137     if prediction[0] == 0:
+                line       138         result = "The Person does not have a Heart Disease"
+New var:....... result = 'The Person does not have a Heart Disease'
+                line       142     return prediction, result
+                return     142     return prediction, result
+Return value:.. (array([0]), 'The Person does not have a Heart Disease')
+Elapsed time: 00:00:00.016405

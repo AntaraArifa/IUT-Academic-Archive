@@ -1,0 +1,53 @@
+﻿# Visual Studio
+.vs/
+*.suo
+*.user
+*.vsidx
+*.pdb
+
+# Build outputs
+**/bin/
+**/obj/
+**/build/
+
+# Flutter and Dart
+.dart_tool/
+.packages
+
+# Node.js
+node_modules/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Downloaded dependencies
+**/packages/
+
+# IDE settings
+.idea/
+
+# Operating system files
+Thumbs.db
+.DS_Store
+Desktop.ini
+
+# Environment secrets
+.env
+.env.*
+!.env.example
+
+# Compiled binaries and object files
+*.exe
+*.o
+*.class
+*.dll
+*.pdb
+*.pyc
+
+# Large files excluded from the GitHub repository
+4.2/Blue and White Modern Research Proposal Seminar Presentation.pdf
+4.2/Maintenance lab/Lab3/Heart_Disease_Lab3_Helper_Files/outputs/viztracer_result.html
+3.1/Server Lab/210042132_Server_Project.mp4

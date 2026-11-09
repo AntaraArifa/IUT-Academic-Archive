@@ -1,0 +1,426 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{color,pxfonts,fix-cm}
+\usepackage{latexsym}
+\usepackage[mathletters]{ucs}
+\DeclareUnicodeCharacter{8211}{\textendash}
+\DeclareUnicodeCharacter{46}{\textperiodcentered}
+\DeclareUnicodeCharacter{58}{$\colon$}
+\DeclareUnicodeCharacter{60}{\textless}
+\DeclareUnicodeCharacter{62}{\textgreater}
+\DeclareUnicodeCharacter{32}{$\ $}
+\usepackage[T1]{fontenc}
+\usepackage[utf8x]{inputenc}
+\usepackage{pict2e}
+\usepackage{wasysym}
+\usepackage[english]{babel}
+\usepackage{tikz}
+\pagestyle{empty}
+\usepackage[margin=0in,paperwidth=612pt,paperheight=792pt]{geometry}
+\begin{document}
+\definecolor{color_29791}{rgb}{0,0,0}
+\definecolor{color_98869}{rgb}{0.266667,0.447059,0.768628}
+\definecolor{color_89502}{rgb}{0.235294,0.25098,0.262745}
+\begin{tikzpicture}[overlay]\path(0pt,0pt);\end{tikzpicture}
+\begin{picture}(-5,0)(2.5,0)
+\put(291.05,-81.09998){\fontsize{20.04}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791} }
+\put(291.05,-115.18){\fontsize{20.04}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791} }
+\put(291.05,-149.14){\fontsize{20.04}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791} }
+\put(291.05,-183.22){\fontsize{20.04}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791} }
+\put(132.02,-217.3){\fontsize{20.04}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}ISLAMIC UNIVERSITY OF TECHNOLOGY }
+\put(198.89,-251.29){\fontsize{20.04}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}DHAKA, BANGLADESH }
+\put(112.7,-285.37){\fontsize{20.04}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}ORGANIZATION OF ISLAMIC COOPERATION }
+\put(213.53,-319.45){\fontsize{20.04}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}DATA STRUCTURES }
+\put(291.05,-353.41){\fontsize{20.04}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791} }
+\put(178.37,-387.49){\fontsize{20.04}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}Name: Antara Arifa Mullick }
+\put(196.49,-421.59){\fontsize{20.04}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}Student ID: 210042132 }
+\put(91.46,-455.55){\fontsize{20.04}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}Department: Computer Science and Engineering }
+\put(129.98,-489.63){\fontsize{20.04}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}Program: B.Sc. in Software Engineering }
+\put(214.25,-523.71){\fontsize{20.04}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}Quiz 4 Assignment }
+\put(291.05,-557.79){\fontsize{20.04}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791} }
+\put(291.05,-591.78){\fontsize{20.04}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791} }
+\put(57.024,-625.86){\fontsize{20.04}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791} }
+\put(57.024,-659.94){\fontsize{20.04}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791} }
+\put(291.05,-693.896){\fontsize{20.04}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791} }
+\end{picture}
+\newpage
+\begin{tikzpicture}[overlay]\path(0pt,0pt);\end{tikzpicture}
+\begin{picture}(-5,0)(2.5,0)
+\put(161.18,-86.85999){\fontsize{26.04}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_98869}ARTICLE ON SEARCHING }
+\put(291.05,-128.74){\fontsize{26.04}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_98869} }
+\put(57.024,-162.94){\fontsize{18}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_98869}Basic understanding of assigned topic – }
+\put(57.024,-190.06){\fontsize{14.04}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_89502}Searching }
+\put(57.024,-215.98){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_89502}Searching is a fundamental operation in computer science that involves }
+\put(57.024,-233.98){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_89502}finding a specific element within a collection of data. The collection could }
+\put(57.024,-251.89){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_89502}be an array, list, tree, or any other data structure. The primary goal of }
+\put(57.024,-269.77){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_89502}searching is to locate the desired item efficiently. }
+\put(57.024,-295.69){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_89502} }
+\put(57.024,-321.61){\fontsize{14.04}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_89502}Types of Searching - }
+\put(57.024,-347.53){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_89502} }
+\put(57.024,-373.45){\fontsize{14.04}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_89502}1. Linear Search: Linear search, also known as sequential search, is a }
+\put(57.024,-391.45){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_89502}simple method where each element in the collection is checked one by }
+\put(57.024,-409.35){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_89502}one until the desired element is found or the entire collection is traversed. }
+\put(57.024,-427.35){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_89502}It is easy to implement and applicable to any list, regardless of whether it }
+\put(57.024,-445.23){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_89502}is sorted or unsorted. }
+\put(57.024,-471.15){\fontsize{14.04}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_89502}Advantages: }
+\put(57.024,-497.07){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_89502}      - Simplicity: Easy to understand and implement. }
+\put(57.024,-522.99){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_89502}      - Applicability: Works on both sorted and unsorted lists. }
+\put(57.024,-548.91){\fontsize{14.04}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_89502}Disadvantages: }
+\put(57.024,-574.86){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_89502}      - Inefficiency: Linear search can be slow for large datasets, especially }
+\put(57.024,-592.74){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_89502}if the desired element is near the end. }
+\put(57.024,-618.66){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_89502} }
+\put(57.024,-644.58){\fontsize{14.04}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_89502}Time Complexity: O(n) - Linear time complexity, where 'n' is the size of the }
+\put(57.024,-662.58){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_89502}dataset. }
+\put(57.024,-688.496){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_89502} }
+\end{picture}
+\newpage
+\begin{tikzpicture}[overlay]\path(0pt,0pt);\end{tikzpicture}
+\begin{picture}(-5,0)(2.5,0)
+\put(57.024,-75.34003){\fontsize{14.04}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_89502}2. Binary Search: Binary search is an efficient search algorithm that }
+\put(57.024,-93.21997){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_89502}works on sorted lists. It repeatedly divides the search space in half by }
+\put(57.024,-111.22){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_89502}comparing the middle element with the target value. It is significantly }
+\put(57.024,-129.1){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_89502}faster than linear search for large sorted datasets. }
+\put(57.024,-155.02){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_89502} Advantages: }
+\put(57.024,-180.94){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_89502}      - Efficiency: Has a time complexity of O(log n), making it highly }
+\put(57.024,-198.82){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_89502}efficient. }
+\put(57.024,-224.74){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_89502}      - Reduced Comparisons: Requires fewer comparisons compared to }
+\put(57.024,-242.77){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_89502}linear search. }
+\put(57.024,-268.69){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_89502} Disadvantages: }
+\put(57.024,-294.61){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_89502}      - Requirement: Applicable only to sorted lists. }
+\put(57.024,-320.53){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_89502}      - Limited Applicability: Not suitable for linked lists. }
+\put(57.024,-346.45){\fontsize{14.04}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_89502}Time Complexity: O (log n) - Logarithmic time complexity, where 'n' is the }
+\put(57.024,-364.33){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_89502}size of the dataset. }
+\put(57.024,-390.25){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_89502} }
+\put(57.024,-416.19){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_89502} }
+\put(57.024,-442.11){\fontsize{14.04}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_89502}3. Ternary Search: Ternary search is an extension of binary search, }
+\put(57.024,-460.11){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_89502}dividing the search space into three parts instead of two. It is used on }
+\put(57.024,-477.99){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_89502}sorted lists to narrow down the search more quickly. It further optimizes }
+\put(57.024,-495.87){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_89502}the search process, making it more efficient in some scenarios than }
+\put(57.024,-513.87){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_89502}binary search. }
+\put(57.024,-539.79){\fontsize{14.04}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_89502}Advantages: }
+\put(57.024,-565.71){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_89502}      - Efficiency: Offers improved efficiency over binary search in certain }
+\put(57.024,-583.62){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_89502}situations. }
+\put(57.024,-609.54){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_89502}      - Faster Convergence: May converge faster than binary search for }
+\put(57.024,-627.54){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_89502}some datasets. }
+\put(57.024,-653.46){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_89502} Disadvantages: }
+\put(57.024,-679.38){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_89502}      - Complexity: More complex than binary search. }
+\end{picture}
+\newpage
+\begin{tikzpicture}[overlay]\path(0pt,0pt);\end{tikzpicture}
+\begin{picture}(-5,0)(2.5,0)
+\put(57.024,-75.34003){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_89502}      - Limited Applicability: Not universally applicable; effectiveness }
+\put(57.024,-93.21997){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_89502}depends on the dataset. }
+\put(57.024,-119.14){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_89502} }
+\put(57.024,-145.06){\fontsize{14.04}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_89502}Time Complexity: O (log3 n) - Logarithmic time complexity, where 'n' is }
+\put(57.024,-163.06){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_89502}the size of the dataset. }
+\put(57.024,-192.82){\fontsize{18}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_89502} }
+\put(57.024,-223.78){\fontsize{18}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_98869}Operations supported }
+\put(57.024,-251.05){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Let's have a look into the operations supported by the three types of }
+\put(57.024,-269.05){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}searches: Linear Search, Binary Search, and Ternary Search. }
+\put(57.024,-294.97){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791} }
+\put(57.024,-320.89){\fontsize{14.04}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}1.Linear Search - Simple and suitable for small or unsorted datasets. }
+\put(57.024,-346.81){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791} Search Method: }
+\put(57.024,-372.73){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}     - Iterate through each element in the collection until the desired }
+\put(57.024,-390.61){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}element is found or the end of the collection is reached. }
+\put(57.024,-416.55){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}     - Compare each element with the target value. }
+\put(57.024,-442.47){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}     - If a match is found, return the index of the element; otherwise, return }
+\put(57.024,-460.35){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}a signal indicating that the element is not present. }
+\put(57.024,-486.27){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791} }
+\put(57.024,-512.19){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791} Operations: }
+\put(57.024,-538.11){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}     Search: Linear search performs a sequential search through the }
+\put(57.024,-556.11){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}elements. }
+\put(57.024,-582.06){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}     Equality Check: Compares each element with the target for equality. }
+\put(57.024,-607.98){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791} }
+\put(57.024,-633.9){\fontsize{14.04}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}2.Binary Search - Efficient for large, sorted datasets with a logarithmic }
+\put(57.024,-651.78){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}time complexity. }
+\put(57.024,-677.7){\fontsize{14.04}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791} }
+\put(57.024,-703.616){\fontsize{14.04}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}   Search Method: }
+\end{picture}
+\newpage
+\begin{tikzpicture}[overlay]\path(0pt,0pt);\end{tikzpicture}
+\begin{picture}(-5,0)(2.5,0)
+\put(57.024,-75.34003){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}     - Compare the target value with the middle element of the sorted list. }
+\put(57.024,-101.26){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}     - If they match, the search is successful; if not, determine whether the }
+\put(57.024,-119.14){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}target is smaller or larger than the middle element. }
+\put(57.024,-145.06){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}     - Repeat the process on the relevant half until the target is found or the }
+\put(57.024,-163.06){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}search space is empty. }
+\put(57.024,-188.98){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791} }
+\put(57.024,-214.9){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}   Operations: }
+\put(57.024,-240.85){\fontsize{14.04}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}      Comparison: Repeatedly compares the target with the middle }
+\put(57.024,-258.73){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}element. }
+\put(57.024,-284.65){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}      Division: Divides the search space in half at each step. }
+\put(57.024,-310.57){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791} }
+\put(57.024,-336.49){\fontsize{14.04}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}3. Ternary Search - An extension of binary search, offering faster }
+\put(57.024,-354.49){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}convergence in specific situations, but more complex. }
+\put(57.024,-380.41){\fontsize{14.04}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}   Search Method: }
+\put(57.024,-406.35){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}     - Compare the target value with the two midpoints that divide the }
+\put(57.024,-424.23){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}sorted list into three parts. }
+\put(57.024,-450.15){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}     - Based on the comparisons, narrow down the search space to one-}
+\put(57.024,-468.03){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}third. }
+\put(57.024,-493.95){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}     - Repeat the process until the target is found or the search space is }
+\put(57.024,-511.95){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}empty. }
+\put(57.024,-537.87){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791} }
+\put(57.024,-563.79){\fontsize{14.04}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}   Operations: }
+\put(57.024,-589.74){\fontsize{14.04}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}     Comparison: Compares the target with two midpoints, dividing the }
+\put(57.024,-607.62){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}search space into three parts. }
+\put(57.024,-633.54){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}     Ternary Division: Divides the search space into three parts at each }
+\put(57.024,-651.54){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}step. }
+\put(57.024,-677.46){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791} }
+\end{picture}
+\newpage
+\begin{tikzpicture}[overlay]\path(0pt,0pt);\end{tikzpicture}
+\begin{picture}(-5,0)(2.5,0)
+\put(57.024,-79.17999){\fontsize{18}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_98869}Story/Realistic problem Scenario }
+\put(57.024,-106.54){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791} }
+\put(57.024,-132.7){\fontsize{14.04}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}Introduction: }
+\put(57.024,-158.98){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Farhan is a diligent student who always keeps his study materials organized. He }
+\put(57.024,-177.22){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}has a collection of textbooks neatly arranged on his bookshelf. One day, however, }
+\put(57.024,-195.46){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}he realizes that his favorite textbook, containing crucial notes for an upcoming }
+\put(57.024,-213.7){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}exam, is missing. In a panic, he decides to employ different search algorithms to }
+\put(57.024,-231.82){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}find the lost book. }
+\put(57.024,-258.13){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791} }
+\put(57.024,-284.41){\fontsize{14.04}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}Linear Search Challenge: }
+\put(57.024,-310.57){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Farhan starts with a linear search, meticulously checking each book on his shelf }
+\put(57.024,-328.81){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}one by one. He carefully scans the titles, hoping to find his missing textbook. The }
+\put(57.024,-347.05){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}operation is straightforward but time-consuming. After going through all the }
+\put(57.024,-365.29){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}books, Farhan finally discovers his textbook buried among the last few. Linear }
+\put(57.024,-383.53){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}search, while simple, proved to be a bit slow for his extensive collection. }
+\put(57.024,-409.71){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791} }
+\put(57.024,-435.99){\fontsize{14.04}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}Binary Search Adventure: }
+\put(57.024,-462.27){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}To save time, Farhan decides to organize his books alphabetically by title. With his }
+\put(57.024,-480.51){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}books sorted, he employs binary search. He opens the bookshelf in the middle, }
+\put(57.024,-498.63){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}checks the title, and determines whether to continue the search in the left or right }
+\put(57.024,-516.87){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}half. Farhan repeats this process until he locates his textbook. Binary search }
+\put(57.024,-535.11){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}significantly reduces the search time, proving especially effective for large, sorted }
+\put(57.024,-553.35){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}collections. }
+\put(57.024,-579.66){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791} }
+\put(57.024,-605.82){\fontsize{14.04}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}Ternary Search Twist: }
+\put(57.024,-632.1){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Curious about optimization, Farhan decides to try ternary search for his next }
+\put(57.024,-650.34){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}challenge. He divides his bookshelf into three equal parts and checks the titles at }
+\put(57.024,-668.58){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}the two breakpoints. Based on the comparisons, he narrows down the search to }
+\put(57.024,-686.816){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}one-third of the shelf. This process continues until he triumphantly finds his }
+\end{picture}
+\newpage
+\begin{tikzpicture}[overlay]\path(0pt,0pt);\end{tikzpicture}
+\begin{picture}(-5,0)(2.5,0)
+\put(57.024,-75.46002){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}textbook. Ternary search, with its three-way division, proves to be a slightly faster }
+\put(57.024,-93.70001){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}alternative, offering a unique approach to locating items in a sorted collection. }
+\put(57.024,-123.58){\fontsize{18}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_98869}Solution of story/Realistic problem Scenario }
+\put(57.024,-150.82){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791} }
+\put(57.024,-176.74){\fontsize{14.04}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}a) Intuition behind the solution: }
+\put(57.024,-202.66){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}The problem involves finding a lost item, namely a textbook, within a }
+\put(57.024,-220.66){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}collection of items. Different search algorithms - Linear Search, Binary }
+\put(57.024,-238.57){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Search, and Ternary Search - are applied to efficiently locate the missing }
+\put(57.024,-256.45){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}textbook based on the organization of the collection. The intuition is to }
+\put(57.024,-274.45){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}understand how each search algorithm operates and choose the one that }
+\put(57.024,-292.33){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}best suits the scenario. }
+\put(57.024,-318.25){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791} }
+\put(57.024,-344.17){\fontsize{14.04}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}b) Solution Steps: }
+\put(57.024,-370.09){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791} }
+\put(57.024,-396.01){\fontsize{14.04}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}1. Linear Search: }
+\put(57.024,-421.95){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}   - Intuition: Linearly scan through the collection, comparing each item }
+\put(57.024,-439.83){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}with the target until the item is found or the end of the collection is }
+\put(57.024,-457.83){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}reached. }
+\put(57.024,-483.75){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}   - Steps: }
+\put(57.024,-509.67){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}     1. Initialize an index variable to 0. }
+\put(57.024,-535.59){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}     2. Iterate through the collection until the target is found or the end is }
+\put(57.024,-553.47){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}reached. }
+\put(57.024,-579.42){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}     3. If the target is found, return the index; otherwise, return a signal }
+\put(57.024,-597.42){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}indicating that the item is not present. }
+\put(57.024,-623.34){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791} }
+\put(57.024,-649.26){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791} }
+\put(57.024,-675.18){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}// C++ code for Linear Search }
+\put(57.024,-701.096){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}int linearSearch(const vector<string>\& collection, const string\& target) \{ }
+\end{picture}
+\newpage
+\begin{tikzpicture}[overlay]\path(0pt,0pt);\end{tikzpicture}
+\begin{picture}(-5,0)(2.5,0)
+\put(57.024,-75.34003){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}    for (int i = 0; i < collection.size(); ++i) \{ }
+\put(57.024,-101.26){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}        if (collection[i] == target) \{ }
+\put(57.024,-127.18){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}            return i; // Found the target, return the index }
+\put(57.024,-153.1){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}        \} }
+\put(57.024,-179.02){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}    \} }
+\put(57.024,-204.94){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}    return -1; // Target not found }
+\put(57.024,-230.86){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}\} }
+\put(57.024,-256.81){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791} }
+\put(57.024,-282.73){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791} }
+\put(57.024,-308.65){\fontsize{14.04}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}2. Binary Search: }
+\put(57.024,-334.57){\fontsize{14.04}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}   - Intuition: Divide the collection into halves and efficiently narrow down }
+\put(57.024,-352.57){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}the search space by comparing the target with the middle element. }
+\put(57.024,-378.49){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}   - Steps: }
+\put(57.024,-404.43){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}     1. Sort the collection. }
+\put(57.024,-430.35){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}     2. Initialize low and high indices. }
+\put(57.024,-456.27){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}     3. Repeat until the low index is less than or equal to the high index. }
+\put(57.024,-482.19){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}     4. Calculate the middle index. }
+\put(57.024,-508.11){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}     5. Compare the target with the middle element. }
+\put(57.024,-534.03){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}     6. Adjust the low or high index based on the comparison. }
+\put(57.024,-559.95){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791} }
+\put(57.024,-585.9){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791} }
+\put(57.024,-611.82){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}// C++ code for Binary Search }
+\put(57.024,-637.74){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}int binarySearch(vector<string>\& collection, const string\& target) \{ }
+\put(57.024,-663.66){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}    sort(collection.begin(), collection.end()); // Sort the collection }
+\put(57.024,-689.576){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}    int low = 0, high = collection.size() - 1; }
+\end{picture}
+\newpage
+\begin{tikzpicture}[overlay]\path(0pt,0pt);\end{tikzpicture}
+\begin{picture}(-5,0)(2.5,0)
+\put(57.024,-75.34003){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}     }
+\put(57.024,-101.26){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}    while (low <= high) \{ }
+\put(57.024,-127.18){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}        int mid = low + (high - low) / 2; }
+\put(57.024,-153.1){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}         }
+\put(57.024,-179.02){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}        if (collection[mid] == target) \{ }
+\put(57.024,-204.94){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}            return mid; // Found the target, return the index }
+\put(57.024,-230.86){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}        \} else if (collection[mid] < target) \{ }
+\put(57.024,-256.81){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}            low = mid + 1; }
+\put(57.024,-282.73){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}        \} else \{ }
+\put(57.024,-308.65){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}            high = mid - 1; }
+\put(57.024,-334.57){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}        \} }
+\put(57.024,-360.49){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}    \} }
+\put(57.024,-386.41){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}     }
+\put(57.024,-412.35){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}    return -1; // Target not found }
+\put(57.024,-438.27){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}\} }
+\put(57.024,-464.19){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791} }
+\put(57.024,-490.11){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791} }
+\put(57.024,-516.03){\fontsize{14.04}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}3. Ternary Search: }
+\put(57.024,-541.95){\fontsize{14.04}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}   - Intuition: Divide the collection into three parts and efficiently narrow }
+\put(57.024,-559.95){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}down the search space by comparing the target with two breakpoints. }
+\put(57.024,-585.9){\fontsize{14.04}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}   - Steps: }
+\put(57.024,-611.82){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}     1. Sort the collection. }
+\put(57.024,-637.74){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}     2. Initialize low and high indices. }
+\put(57.024,-663.66){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}     3. Repeat until the low index is less than or equal to the high index. }
+\put(57.024,-689.576){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}     4. Calculate two midpoints. }
+\end{picture}
+\newpage
+\begin{tikzpicture}[overlay]\path(0pt,0pt);\end{tikzpicture}
+\begin{picture}(-5,0)(2.5,0)
+\put(57.024,-75.34003){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}     5. Compare the target with the two midpoints. }
+\put(57.024,-101.26){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}     6. Adjust the low or high index based on the comparisons. }
+\put(57.024,-127.18){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791} }
+\put(57.024,-153.1){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}// C++ code for Ternary Search }
+\put(57.024,-179.02){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}int ternarySearch(vector<string>\& collection, const string\& target) \{ }
+\put(57.024,-204.94){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}    sort(collection.begin(), collection.end()); // Sort the collection }
+\put(57.024,-230.86){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}    int low = 0, high = collection.size() - 1; }
+\put(57.024,-256.81){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}     }
+\put(57.024,-282.73){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}    while (low <= high) \{ }
+\put(57.024,-308.65){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}        int mid1 = low + (high - low) / 3; }
+\put(57.024,-334.57){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}        int mid2 = high - (high - low) / 3; }
+\put(57.024,-360.49){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}         }
+\put(57.024,-386.41){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}        if (collection[mid1] == target) \{ }
+\put(57.024,-412.35){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}            return mid1; // Found the target, return the index }
+\put(57.024,-438.27){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}        \} else if (collection[mid2] == target) \{ }
+\put(57.024,-464.19){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}            return mid2; // Found the target, return the index }
+\put(57.024,-490.11){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}        \} else if (collection[mid1] > target) \{ }
+\put(57.024,-516.03){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}            high = mid1 - 1; }
+\put(57.024,-541.95){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}        \} else if (collection[mid2] < target) \{ }
+\put(57.024,-567.87){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}            low = mid2 + 1; }
+\put(57.024,-593.82){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}        \} else \{ }
+\put(57.024,-619.74){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}            low = mid1 + 1; }
+\put(57.024,-645.78){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}            high = mid2 - 1; }
+\put(57.024,-671.7){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}        \} }
+\put(57.024,-697.616){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}    \} }
+\end{picture}
+\newpage
+\begin{tikzpicture}[overlay]\path(0pt,0pt);\end{tikzpicture}
+\begin{picture}(-5,0)(2.5,0)
+\put(57.024,-75.34003){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}     }
+\put(57.024,-101.26){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}    return -1; // Target not found }
+\put(57.024,-127.18){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}\} }
+\put(57.024,-153.1){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791} }
+\put(57.024,-179.02){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791} }
+\put(57.024,-204.94){\fontsize{14.04}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}c) Complexity Analysis: }
+\put(57.024,-230.86){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791} }
+\put(57.024,-256.81){\fontsize{14.04}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}Linear Search: }
+\put(57.024,-282.73){\fontsize{14.04}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}   - Time Complexity: O(n) - Linear time, where 'n' is the size of the }
+\put(57.024,-300.73){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}collection. }
+\put(57.024,-326.65){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}   - Space Complexity: O(1) - Constant space. }
+\put(57.024,-352.57){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791} }
+\put(57.024,-378.49){\fontsize{14.04}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}Binary Search: }
+\put(57.024,-404.43){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}   - Time Complexity: O(log n) - Logarithmic time, where 'n' is the size of }
+\put(57.024,-422.31){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}the collection (due to sorting). }
+\put(57.024,-448.23){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}   - Space Complexity: O(1) - Constant space (ignoring the space required }
+\put(57.024,-466.11){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}for the input collection). }
+\put(57.024,-492.03){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791} }
+\put(57.024,-517.95){\fontsize{14.04}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}Ternary Search: }
+\put(57.024,-543.87){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}   - Time Complexity: O(log3 n) - Logarithmic time, where 'n' is the size of }
+\put(57.024,-561.87){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}the collection (due to sorting). }
+\put(57.024,-587.82){\fontsize{14.04}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}   - Space Complexity: O(1) - Constant space (ignoring the space required }
+\put(57.024,-605.7){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}for the input collection). }
+\put(57.024,-631.74){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791} }
+\put(57.024,-661.74){\fontsize{18}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_98869}Conclusion Comment }
+\put(57.024,-688.856){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791} }
+\end{picture}
+\newpage
+\begin{tikzpicture}[overlay]\path(0pt,0pt);\end{tikzpicture}
+\begin{picture}(-5,0)(2.5,0)
+\put(57.024,-75.34003){\fontsize{14.04}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}Where to Use: }
+\put(57.024,-101.26){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791} }
+\put(57.024,-127.18){\fontsize{14.04}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}1. Linear Search: }
+\put(57.024,-153.1){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}   - Suitable for small or unsorted datasets. }
+\put(57.024,-179.02){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}   - Ideal for simplicity in tasks like searching a phone book. }
+\put(57.024,-204.94){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791} }
+\put(57.024,-230.86){\fontsize{14.04}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}2. Binary Search: }
+\put(57.024,-256.81){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}   - Efficient for large, sorted datasets. }
+\put(57.024,-282.73){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}   - Appropriate for tasks like finding a word in a dictionary. }
+\put(57.024,-308.65){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791} }
+\put(57.024,-334.57){\fontsize{14.04}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}3. Ternary Search: }
+\put(57.024,-360.49){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}   - Useful in scenarios where a three-way division provides an advantage. }
+\put(57.024,-386.41){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}   - Effective when faster convergence is required. }
+\put(57.024,-412.35){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791} }
+\put(57.024,-438.27){\fontsize{14.04}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}Where Not to Use: }
+\put(57.024,-464.19){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791} }
+\put(57.024,-490.11){\fontsize{14.04}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}1. Linear Search: }
+\put(57.024,-516.03){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}   - Inefficient for large datasets. }
+\put(57.024,-541.95){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}   - Less suitable for sorted data. }
+\put(57.024,-567.87){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791} }
+\put(57.024,-593.82){\fontsize{14.04}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}2. Binary Search: }
+\put(57.024,-619.74){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}   - Not suitable for unsorted datasets. }
+\put(57.024,-645.78){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}   - Challenging with linked lists due to the need for random access. }
+\put(57.024,-671.7){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791} }
+\put(57.024,-697.616){\fontsize{14.04}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}3. Ternary Search: }
+\end{picture}
+\newpage
+\begin{tikzpicture}[overlay]\path(0pt,0pt);\end{tikzpicture}
+\begin{picture}(-5,0)(2.5,0)
+\put(57.024,-75.34003){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}   - May be complex for simple or small datasets. }
+\put(57.024,-101.26){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}   - Not necessary when a two-way division (binary search) suffices. }
+\put(57.024,-127.18){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791} }
+\put(57.024,-156.94){\fontsize{18}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_98869}3 other problem links of different online judge that can }
+\put(57.024,-179.98){\fontsize{18}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_98869}be solved using this article knowledge }
+\put(57.024,-211.06){\fontsize{18}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_98869} }
+\put(57.024,-238.33){\fontsize{14.04}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}Binary Search Problem: }
+\put(57.024,-264.61){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}[Codeforces Problem 750A - New Year and Hurry] }
+\put(57.024,-290.89){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}(https://codeforces.com/problemset/problem/750/A) }
+\put(57.024,-317.05){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791} }
+\put(57.024,-343.33){\fontsize{14.04}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}Problem Description: }
+\put(57.024,-369.49){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Limak is going to participate in a contest on the last day of the year. The contest }
+\put(57.024,-387.73){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}will start at 20:00 and last for four hours, until midnight. There will be n problems, }
+\put(57.024,-405.99){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}and Limak needs k minutes to get to the New Year's Eve party. Limak wants to }
+\put(57.024,-424.23){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}maximize the number of problems he can solve before the contest ends. }
+\put(57.024,-442.47){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}Implement binary search to find the maximum number of problems Limak can }
+\put(57.024,-460.71){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}solve. }
+\put(57.024,-486.99){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791} }
+\put(57.024,-513.15){\fontsize{14.04}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}Binary Search Problem: }
+\put(57.024,-539.43){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}[Codeforces Problem 899/B - Sushi for Two] }
+\put(57.024,-565.59){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}(https://codeforces.com/problemset/problem/899/B) }
+\put(57.024,-591.9){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791} }
+\put(57.024,-618.06){\fontsize{14.04}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}Problem Description: }
+\put(57.024,-644.34){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}You are given a sequence of n sushi pieces, each labeled with a type (either 1 or }
+\put(57.024,-662.58){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}2). You want to choose a contiguous subsegment such that the number of 1s and }
+\put(57.024,-680.82){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}2s in the subsegment is equal and as large as possible. Implement binary search to }
+\put(57.024,-699.056){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}find the maximum length of such a subsegment. }
+\end{picture}
+\newpage
+\begin{tikzpicture}[overlay]\path(0pt,0pt);\end{tikzpicture}
+\begin{picture}(-5,0)(2.5,0)
+\put(57.024,-75.46002){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791} }
+\put(57.024,-101.74){\fontsize{14.04}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}Linear Search Problem: }
+\put(57.024,-127.9){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}[Codeforces Problem 144A - Arrival of the General] }
+\put(57.024,-146.14){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}(https://codeforces.com/problemset/problem/144/A) }
+\put(57.024,-172.42){\fontsize{14.04}{1}\usefont{T1}{cmr}{b}{n}\selectfont\color{color_29791}Problem Description: }
+\put(57.024,-198.58){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}You are given the heights of soldiers in a line. The general wants to rearrange }
+\put(57.024,-216.82){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}them in such a way that the soldier with the maximum height is at the front and }
+\put(57.024,-235.06){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}the one with the minimum height is at the end. Determine the minimum number }
+\put(57.024,-253.33){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791}of moves the general needs to make. }
+\put(57.024,-279.61){\fontsize{14.04}{1}\usefont{T1}{cmr}{m}{n}\selectfont\color{color_29791} }
+\end{picture}
+\end{document}

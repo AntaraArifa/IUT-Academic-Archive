@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Basic Calculator</title>
+<style>
+  body { font-family: Arial, sans-serif; background: #1e1e2f; color: #f0f0f0; display: flex; justify-content: center; align-items: center; min-height: 100vh; margin: 0; }
+  .container { background: #2a2a40; padding: 32px; border-radius: 12px; width: 320px; box-shadow: 0 4px 20px rgba(0,0,0,0.4); }
+  .back { color: #9fb3ff; text-decoration: none; display: inline-block; margin-bottom: 16px; }
+  .row { display: flex; gap: 8px; margin-bottom: 12px; }
+  input { flex: 1; padding: 8px; border-radius: 6px; border: none; }
+  button { flex: 1; padding: 10px; border: none; border-radius: 6px; background: #4f7cff; color: white; font-weight: bold; cursor: pointer; }
+  button:hover { background: #6a91ff; }
+  #result { font-size: 1.2em; margin-top: 16px; }
+</style>
+</head>
+<body>
+  <div class="container">
+    <a class="back" href="index.html">&larr; Home</a>
+    <h1>Basic Calculator</h1>
+    <div class="row">
+      <input type="number" id="a" placeholder="First number">
+      <input type="number" id="b" placeholder="Second number">
+    </div>
+    <div class="row">
+      <button onclick="calc('add')">+</button>
+      <button onclick="calc('subtract')">-</button>
+      <button onclick="calc('multiply')">*</button>
+      <button onclick="calc('divide')">/</button>
+    </div>
+    <p id="result"></p>
+  </div>
+
+  <script src="Scripts/basic.js"></script>
+  <script>
+    function calc(op) {
+      const a = parseFloat(document.getElementById('a').value);
+      const b = parseFloat(document.getElementById('b').value);
+      const resultEl = document.getElementById('result');
+      if (isNaN(a) || isNaN(b)) {
+        resultEl.textContent = 'Please enter valid numbers';
+        return;
+      }
+      resultEl.textContent = 'Result: ' + window.basic[op](a, b);
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,220 @@
+{
+	"info": {
+		"_postman_id": "be6b9547-8763-4575-9a48-79c3da31c5da",
+		"name": "Virtual Pet Playground",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "38712527"
+	},
+	"item": [
+		{
+			"name": "Create a pet",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Fluffy",
+							"type": "text"
+						},
+						{
+							"key": "age",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "species",
+							"value": "Bunny",
+							"type": "text"
+						},
+						{
+							"key": "images",
+							"type": "file",
+							"src": "/C:/Users/USER/Downloads/Bunny.jpeg"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/pets",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"pets"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create with multiple image",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "lala",
+							"type": "text"
+						},
+						{
+							"key": "age",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "species",
+							"value": "Bunny",
+							"type": "text"
+						},
+						{
+							"key": "images",
+							"type": "file",
+							"src": [
+								"/C:/Users/USER/Downloads/Bunny 2.jpeg",
+								"/C:/Users/USER/Downloads/Bunny.jpeg",
+								"/C:/Users/USER/Downloads/puppy 2.jpeg",
+								"/C:/Users/USER/Downloads/puppy.jpeg"
+							]
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/pets",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"pets"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Feed pet",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/pets/67cfebe151d42b35264b4372/feed",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"pets",
+						"67cfebe151d42b35264b4372",
+						"feed"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "play with pet",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/pets/67cfebe151d42b35264b4372/play",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"pets",
+						"67cfebe151d42b35264b4372",
+						"play"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Release pet",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/pets/67cfeab68bb6797a8d658f82",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"pets",
+						"67cfeab68bb6797a8d658f82"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Pet Stats",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/pets/67cfebe151d42b35264b4372",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"pets",
+						"67cfebe151d42b35264b4372"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

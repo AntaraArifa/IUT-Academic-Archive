@@ -1,0 +1,301 @@
+﻿
+using System;
+using System.Globalization;
+using System.IO;
+using System.Linq;
+using System.Reflection;
+using Xunit;
+
+
+public class AirlineSystemFullTests
+{
+    public AirlineSystemFullTests()
+    {
+       
+        Customer.CustomerCollection.Clear();
+        new Flight().GetFlightList().Clear();
+
+        // Clear admin credentials array
+        var field = typeof(User).GetField("adminUserNameAndPassword",
+            BindingFlags.Static | BindingFlags.NonPublic | BindingFlags.FlattenHierarchy);
+        var credArray = (string[,])field.GetValue(null);
+        for (int i = 0; i < credArray.GetLength(0); i++)
+        {
+            credArray[i, 0] = null;
+            credArray[i, 1] = null;
+        }
+    }
+
+    // ---------- TC‑0001 ----------
+    [Fact(Skip = "Manual UI verification outside unit scope")]
+    public void TC0001_SignUp_UI_Elements() { }
+
+    // ---------- TC‑0002 ----------
+    [Fact]
+    public void TC0002_Register_Unique_Email_Succeeds()
+    {
+        var cust = new Customer("Unique", "unique@ex.com", "pw", "0170", "Dhaka", 25);
+        Customer.CustomerCollection.Add(cust);
+
+        Assert.True(cust.IsEmailAlreadyRegistered("unique@ex.com"));
+        Assert.Single(Customer.CustomerCollection);
+    }
+
+    // ---------- TC‑0003 ----------
+    [Fact]
+    public void TC0003_Duplicate_Email_Rejected()
+    {
+        var c1 = new Customer("A", "dup@ex.com", "pw", "0171", "Dhaka", 26);
+        var c2 = new Customer("B", "dup@ex.com", "pw2", "0172", "Dhaka", 27);
+        Customer.CustomerCollection.Add(c1);
+        bool duplicateExists = c2.IsEmailAlreadyRegistered("dup@ex.com");
+
+        Assert.True(duplicateExists);
+    }
+
+    // ---------- TC‑0004 ----------
+    [Fact]
+    public void TC0004_RandomID_GreaterOrEqual_20000()
+    {
+        var rng = new RandomGenerator();
+        rng.RandomIDGen();
+        int id = int.Parse(rng.GetRandomNumber());
+        Assert.True(id >= 20000);
+    }
+
+    // ---------- TC‑0005 ----------
+    [Fact]
+    public void TC0005_RandomDestinations_NotEqual()
+    {
+        var rng = new RandomGenerator();
+        var dests = rng.RandomDestinations();
+        Assert.NotEqual(dests[0][0], dests[1][0]);
+    }
+
+    // ---------- TC‑0006 ----------
+    [Fact]
+    public void TC0006_FlightScheduler_Creates_15_Flights()
+    {
+        var f = new Flight();
+        f.FlightScheduler();
+        Assert.Equal(15, f.GetFlightList().Count);
+    }
+
+    // ---------- TC‑0007 ----------
+    [Fact]
+    public void TC0007_CalculateDistance_Returns_3_Elements()
+    {
+        var f = new Flight();
+        var arr = f.CalculateDistance(40.6413, -73.7781, 33.9416, -118.4085);
+        Assert.Equal(3, arr.Length);
+    }
+
+    // ---------- TC‑0008 ----------
+    [Fact]
+    public void TC0008_CalculateFlightTime_Rounds()
+    {
+        var f = new Flight();
+        string hhmm = f.CalculateFlightTime(450);
+        Assert.Equal("01:00", hhmm);
+    }
+
+    // ---------- TC‑0009 ----------
+    [Fact]
+    public void TC0009_FetchArrivalTime_Is_SchedulePlusDuration()
+    {
+        
+        var scheduler = new Flight();
+        scheduler.FlightScheduler();              
+        Flight flight = scheduler.GetFlightList().First();
+
+        
+        DateTime departure = DateTime.ParseExact(
+            flight.GetFlightSchedule(),            
+            "dddd, dd MMMM yyyy, HH:mm tt ",
+            CultureInfo.InvariantCulture);
+
+       
+        var parts = flight.GetFlightTime().Split(':');
+        int hours = int.Parse(parts[0]);
+        int minutes = int.Parse(parts[1]);
+        DateTime expectedArrival = departure.AddHours(hours)
+                                            .AddMinutes(minutes);
+
+        // Act
+        string actualArrivalText = flight.FetchArrivalTime();  
+        DateTime actualArrival = DateTime.ParseExact(
+            actualArrivalText,
+            "ddd, dd-MM-yyyy HH:mm tt",
+            CultureInfo.InvariantCulture);
+
+        // Assert
+        Assert.Equal(expectedArrival, actualArrival);
+    }
+
+
+    // ---------- TC‑0010 ----------
+    [Fact]
+    public void TC0010_Booking_Reduces_Seat_Count()
+    {
+        var scheduler = new Flight();
+        scheduler.FlightScheduler();
+        var flight = scheduler.GetFlightList().First();
+        int startSeats = flight.GetNoOfSeats();
+
+        var cust = new Customer("Seat", "seat@ex.com", "pw", "0173", "Dhaka", 28);
+        Customer.CustomerCollection.Add(cust);
+        var res = new FlightReservation();
+        res.BookFlight(flight.GetFlightNumber(), 3, cust.UserID);
+
+        Assert.Equal(startSeats - 3, flight.GetNoOfSeats());
+    }
+
+    // ---------- TC‑0011 ----------
+    [Fact]
+    public void TC0011_Booking_Adds_Customer_To_Roster()
+    {
+        var scheduler = new Flight();
+        scheduler.FlightScheduler();
+        var flight = scheduler.GetFlightList().First();
+
+        var cust = new Customer("Roster", "roster@ex.com", "pw", "0174", "Dhaka", 29);
+        Customer.CustomerCollection.Add(cust);
+        var res = new FlightReservation();
+        res.BookFlight(flight.GetFlightNumber(), 1, cust.UserID);
+
+        Assert.Contains(cust, flight.GetListOfRegisteredCustomersInAFlight());
+    }
+
+    // ---------- TC‑0012 ----------
+    [Fact]
+    public void TC0012_Repeat_Booking_Updates_Tickets()
+    {
+        var scheduler = new Flight();
+        scheduler.FlightScheduler();
+        var flight = scheduler.GetFlightList().First();
+
+        var cust = new Customer("Repeat", "repeat@ex.com", "pw", "0175", "Dhaka", 30);
+        Customer.CustomerCollection.Add(cust);
+        var res = new FlightReservation();
+        res.BookFlight(flight.GetFlightNumber(), 2, cust.UserID);
+        res.BookFlight(flight.GetFlightNumber(), 4, cust.UserID);
+
+        int idx = cust.FlightsRegisteredByUser.IndexOf(flight);
+        Assert.Equal(6, cust.NumOfTicketsBookedByUser[idx]);
+    }
+
+    // ---------- TC‑0013 ----------
+    [Fact]
+    public void TC0013_Cancel_Flight_Restores_Seats()
+    {
+        var scheduler = new Flight();
+        scheduler.FlightScheduler();
+        var flight = scheduler.GetFlightList().First();
+
+        var cust = new Customer("Cancel", "cancel@ex.com", "pw", "0176", "Dhaka", 31);
+        Customer.CustomerCollection.Add(cust);
+        var res = new FlightReservation();
+        res.BookFlight(flight.GetFlightNumber(), 6, cust.UserID);
+
+        int seatsAfterBooking = flight.GetNoOfSeats();
+        string input = $"{flight.GetFlightNumber()}\n4\n";
+        var originalIn = Console.In;
+        Console.SetIn(new StringReader(input));
+        res.CancelFlight(cust.UserID);
+        Console.SetIn(originalIn);
+
+        Assert.Equal(seatsAfterBooking + 4, flight.GetNoOfSeats());
+    }
+
+    // ---------- TC‑0014 ----------
+    [Fact]
+    public void TC0014_Admin_Credential_Returns_Index()
+    {
+        var field = typeof(User).GetField("adminUserNameAndPassword",
+            BindingFlags.Static | BindingFlags.NonPublic | BindingFlags.FlattenHierarchy);
+        var arr = (string[,])field.GetValue(null);
+        arr[0, 0] = "root";
+        arr[0, 1] = "root";
+
+        var roles = new RolesAndPermissions();
+        int idx = roles.IsPrivilegedUserOrNot("root", "root");
+        Assert.Equal(0, idx);
+    }
+
+    // ---------- TC‑0015 ----------
+    [Fact]
+    public void TC0015_Invalid_Admin_Returns_Minus1()
+    {
+        var roles = new RolesAndPermissions();
+        int idx = roles.IsPrivilegedUserOrNot("bad", "wrong");
+        Assert.Equal(-1, idx);
+    }
+
+    // ---------- TC‑0016 ----------
+    [Fact]
+    public void TC0016_Passenger_Auth_Returns_Token()
+    {
+        var cust = new Customer("Auth", "auth@ex.com", "pw", "0177", "Dhaka", 32);
+        Customer.CustomerCollection.Add(cust);
+
+        var roles = new RolesAndPermissions();
+        string token = roles.IsPassengerRegistered("auth@ex.com", "pw");
+        Assert.StartsWith("1-", token);
+        Assert.EndsWith(cust.UserID, token);
+    }
+
+    // ---------- TC‑0017 ----------
+    [Fact]
+    public void TC0017_EditUserInfo_Updates_Fields()
+    {
+        var cust = new Customer("Alice", "alice@ex.com", "pw", "000", "Dhaka", 23);
+        Customer.CustomerCollection.Add(cust);
+
+        string input = "\n\n555\n\n\n";
+        var originalIn = Console.In;
+        Console.SetIn(new StringReader(input));
+        cust.EditUserInfo(cust.UserID);
+        Console.SetIn(originalIn);
+
+        Assert.Equal("Alice", cust.Name);
+        Assert.Equal("555", cust.Phone);
+    }
+
+    // ---------- TC‑0018 ----------
+    [Fact]
+    public void TC0018_DeleteUser_Removes_Customer()
+    {
+        var cust = new Customer("Bob", "bob@ex.com", "pw", "002", "Dhaka", 27);
+        Customer.CustomerCollection.Add(cust);
+
+        cust.DeleteUser(cust.UserID);
+        Assert.False(cust.IsEmailAlreadyRegistered("bob@ex.com"));
+    }
+
+    // ---------- TC‑0019 ----------
+    [Fact]
+    public void TC0019_CreateNewFlightsAndTime_Future_Quarter()
+    {
+        var f = new Flight();
+        string ts = f.CreateNewFlightsAndTime();
+        DateTime dt = DateTime.ParseExact(ts, "dddd, dd MMMM yyyy, HH:mm tt ", null);
+
+        Assert.True(dt > DateTime.Now);
+        Assert.Contains(dt.Minute, new[] { 0, 15, 30, 45 });
+    }
+
+    // ---------- TC‑0020 ----------
+    [Fact]
+    public void TC0020_GetNearestHourQuarter_Rounds()
+    {
+        var f = new Flight();
+        DateTime d1 = new DateTime(2025, 6, 19, 10, 7, 0);
+        DateTime d2 = new DateTime(2025, 6, 19, 10, 9, 0);
+
+        DateTime r1 = f.GetNearestHourQuarter(d1);
+        DateTime r2 = f.GetNearestHourQuarter(d2);
+
+        Assert.Equal(new DateTime(2025, 6, 19, 10, 0, 0), r1);
+        Assert.Equal(new DateTime(2025, 6, 19, 10, 15, 0), r2);
+    }
+}

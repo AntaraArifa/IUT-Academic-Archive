@@ -1,0 +1,246 @@
+1.
+
+use SocialMedia
+
+2.
+
+db.createCollection("users", {
+   validator: {
+      $jsonSchema: {
+         required: ["name", "email", "password"],
+         properties: {
+            name: {
+               bsonType: "string",
+               description: "must be a string and is required"
+            },
+            email: {
+               bsonType: "string",
+               description: "must be a string and is required"
+            },
+            password: {
+               bsonType: "string",
+               description: "must be a string and is required"
+            }
+         }
+      }
+   }
+})
+
+3.
+
+db.createCollection("posts", {
+   validator: {
+      $jsonSchema: {
+         required: ["content"],
+         properties: {
+            content: {
+               bsonType: "string",
+               description: "must be a string and is required"
+            }
+         }
+      }
+   }
+})
+
+4.
+a)
+
+db.users.insertOne({
+   name: "Farhan Abid",
+   email: "farhan12@gmail.com",
+   password: "012012"
+})
+
+b)
+
+db.users.insertOne({
+   name: "Tasnia Anwar",
+   email: "tasnia24@gmail.com",
+   password: "210042124",
+   hobbies: ["reading", "singing"]
+})
+
+c)
+
+db.users.insertMany([
+   {
+      name: "Rifah Ferdous",
+      email: "rifah69@gmail.com",
+      password: "210042169",
+      phoneNumber: {
+         personal: "01712375423",
+         work: "01745385648"
+      }
+   },
+   {
+      name: "Labibah Hoque",
+      email: "labibah21@gmail.com",
+      password: "210042121",
+      phoneNumber: {
+         personal: "01954375423",
+         work: "01965385648"
+      }
+   }
+])
+
+d)
+
+db.posts.insertMany([
+   {
+      content: "This is my first post.",
+      creationTime: ISODate("2024-03-28T00:00:00Z")
+   },
+   {
+      content: "This is my second post.",
+      creationTime: ISODate("2024-04-28T00:00:00Z")
+   },
+   {
+      content: "This is my third post.",
+      creationTime: ISODate("2024-05-28T00:00:00Z")
+   },
+   {
+      content: "This is my fourth post.",
+      creationTime: ISODate("2024-06-28T00:00:00Z")
+   }
+])
+
+5.
+
+a)
+
+db.users.updateOne(
+   { name: "Rifah Ferdous" },
+   { $set: { followers: "Alfey Sani" } }
+)
+
+db.users.updateOne(
+   { name: "Labibah Hoque" },
+   { $set: { followers: "Lamia Bint" } }
+)
+
+b)
+
+db.users.updateOne(
+   { name: "Rifah Ferdous" },
+   { $set: { friends: "Lamia Bint" } }
+)
+
+db.users.updateOne(
+   { name: "Labibah Hoque" },
+   { $set: { friends: "Alfey Sani" } }
+)
+
+c)
+
+db.posts.updateOne(
+   { content: "This is my first post." },
+   { $set: { likes: ["Labibah Hoque", "Rifah Ferdous"] } }
+)
+
+db.posts.updateOne(
+   { content: "This is my second post." },
+   { $set: { likes: ["Rifah Ferdous", "Farhan Abid"] } }
+)
+
+d)
+
+db.posts.updateOne(
+   { content: "This is my first post." },
+   { $push: { comments: { $each: [
+       { commenter: "Lamia Bint", text: "Great post!" },
+       { commenter: "Rifah Ferdous", text: "Nice post!" }
+   ] } } }
+)
+
+db.posts.updateOne(
+   { content: "This is my second post." },
+   { $push: { comments: { $each: [
+       { commenter: "Lamia Bint", text: "Wowwww!" },
+       { commenter: "Rifah Ferdous", text: "Beautiful!" }
+   ] } } }
+)
+
+6.
+
+a)
+
+db.posts.count();
+
+b)
+
+db.posts.find().sort({ creationDate: -1 }).forEach(post => {
+    const user = db.users.findOne({ _id: post.userId });
+    if (user) {
+        print(`Post: ${post.content}, User: ${user.name}`);
+    } else {
+        print(`Post: ${post.content}, User not found`);
+    }
+});
+
+c)
+
+var yesterday = new Date();
+yesterday.setDate(yesterday.getDate() - 1);
+
+db.posts.aggregate([
+    {
+        $match: {
+            creationTime: { $lte: yesterday }
+        }
+    }
+]);
+
+d)
+
+db.users.updateMany(
+    { name: { $in: ["Rifah Ferdous", "Labibah Hoque", "Farhan Abid", "Tasnia Anwar"] } },
+    { $set: { following: ["Takia", "Maliat", "Rayshad", "Niaz"] } }
+)
+db.users.find({
+    following: { $exists: true },
+    $expr: { $gt: [{ $size: "$following" }, 3] }
+})
+
+e)
+
+db.users.updateMany(
+
+    { name: "Rifah Ferdous" },
+    { $set: { date_of_birth: new Date("1992-01-01") } }
+);
+db.users.updateMany(
+    { name: "Labibah Hoque" },
+    { $set: { date_of_birth: new Date("1996-01-01") } }
+);
+db.users.updateMany(
+    { name: "Farhan Abid" },
+    { $set: { date_of_birth: new Date("1999-01-01") } }
+);
+db.users.updateMany(
+    { name: "Tasnia Anwar" },
+    { $set: { date_of_birth: new Date("2002-10-02") } }
+);
+
+db.users.find({
+    date_of_birth: {
+        $gte: new Date("1990-01-01"),
+        $lte: new Date("2000-12-31")
+    }
+});
+
+f)
+db.users.find().sort({ creationDate: 1 }).limit(3);
+
+g)
+db.posts.find({ "comment.commenter": "Abc" });
+
+h)
+db.posts.aggregate([
+    { $match: { content: "Life is too good" } },
+    { $lookup: { from: "users", localField: "poster", foreignField: "name", as: "userDetails" } }
+]);
+
+7.
+
+db.users.deleteMany({ "phoneNumber.work": { $exists: false } })
+

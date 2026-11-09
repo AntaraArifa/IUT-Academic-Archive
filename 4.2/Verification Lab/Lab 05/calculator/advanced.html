@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Advanced Calculator</title>
+<style>
+  body { font-family: Arial, sans-serif; background: #1e1e2f; color: #f0f0f0; display: flex; justify-content: center; align-items: center; min-height: 100vh; margin: 0; }
+  .container { background: #2a2a40; padding: 32px; border-radius: 12px; width: 320px; box-shadow: 0 4px 20px rgba(0,0,0,0.4); }
+  .back { color: #9fb3ff; text-decoration: none; display: inline-block; margin-bottom: 16px; }
+  .row { display: flex; gap: 8px; margin-bottom: 12px; }
+  input { flex: 1; padding: 8px; border-radius: 6px; border: none; }
+  button { flex: 1; padding: 10px; border: none; border-radius: 6px; background: #4f7cff; color: white; font-weight: bold; cursor: pointer; }
+  button:hover { background: #6a91ff; }
+  #result { font-size: 1.2em; margin-top: 16px; }
+</style>
+</head>
+<body>
+  <div class="container">
+    <a class="back" href="index.html">&larr; Home</a>
+    <h1>Advanced Calculator</h1>
+    <div class="row">
+      <input type="number" id="x" placeholder="Base / a">
+      <input type="number" id="n" placeholder="Exponent / b">
+    </div>
+    <div class="row">
+      <button onclick="calc('pow')">x^n</button>
+      <button onclick="calc('modulo')">a % b</button>
+    </div>
+    <p id="result"></p>
+  </div>
+
+  <script src="Scripts/advanced.js"></script>
+  <script>
+    function calc(op) {
+      const x = parseFloat(document.getElementById('x').value);
+      const n = parseFloat(document.getElementById('n').value);
+      const resultEl = document.getElementById('result');
+      if (isNaN(x) || isNaN(n)) {
+        resultEl.textContent = 'Please enter valid numbers';
+        return;
+      }
+      resultEl.textContent = 'Result: ' + window.advanced[op](x, n);
+    }
+  </script>
+</body>
+</html>

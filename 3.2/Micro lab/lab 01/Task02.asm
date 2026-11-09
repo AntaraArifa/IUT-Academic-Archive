@@ -1,0 +1,19 @@
+ORG 0100h
+
+.DATA
+
+.CODE
+
+MAIN PROC
+    
+    MOV AX, 0FFFH  
+    MOV BX, 10H
+    MUL BX
+
+    
+    ADD AX, 1111B
+    
+MAIN ENDP
+
+END MAIN
+RET

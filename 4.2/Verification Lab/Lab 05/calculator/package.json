@@ -1,0 +1,35 @@
+{
+  "name": "calculator-app",
+  "version": "1.0.0",
+  "description": "Multi-page calculator web app with unit testing, integration testing and CI",
+  "main": "Scripts/custom.js",
+  "scripts": {
+    "test": "jest",
+    "test:unit": "jest Tests/basic.test.js Tests/advanced.test.js Tests/custom.test.js",
+    "test:integration": "jest Tests/integration.test.js Tests/stub.test.js",
+    "coverage": "jest --coverage"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "jest-html-reporters": "^3.1.7"
+  },
+  "jest": {
+    "testMatch": [
+      "**/Tests/**/*.test.js"
+    ],
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "Scripts/**/*.js"
+    ],
+    "coverageReporters": [
+      "text",
+      "lcov",
+      "html"
+    ],
+    "coverageDirectory": "code-coverage-report",
+    "reporters": [
+      "default",
+      "jest-html-reporters"
+    ]
+  }
+}

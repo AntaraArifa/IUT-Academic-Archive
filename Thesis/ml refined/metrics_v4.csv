@@ -1,0 +1,4 @@
+model,pool,auc_roc,assignment_hit_rate,top3_accuracy,top5_accuracy,top10_accuracy,mrr,avg_predicted_latency_hours,mae_latency_hours
+ml_v4_requested_pool,requested (~1.2),1.0,0.2243,0.2279,0.2279,0.2279,0.3609,22.75,89.64
+ml_v4_top54_pool,top-54 normalised,0.9879,0.4412,0.8787,0.9596,0.9963,0.8278,22.75,89.64
+ml_v4_candidates_pool,candidates (925),0.9993,0.4669,0.8382,0.9449,0.989,0.8336,22.75,89.64

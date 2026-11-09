@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33205.214
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab Task 02", "Lab Task 02\Lab Task 02.csproj", "{5CF85C97-01DE-4730-AFA4-29F8F79E4A16}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab Task 02 aggregation", "Lab Task 02 aggregation\Lab Task 02 aggregation.csproj", "{632E0444-9272-4B52-B7DB-FDBC65785E07}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab Task 02 Composition", "Lab Task 02 Composition\Lab Task 02 Composition.csproj", "{6370BA01-D09A-4B22-958D-EBECB81CFF0F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab Task 02 Delegation", "Lab Task 02 Delegation\Lab Task 02 Delegation.csproj", "{09443EE7-CB73-4086-9730-2BCEF14439F9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab Task 02 Combined", "Lab Task 02 Combined\Lab Task 02 Combined.csproj", "{A5C32F97-EA62-4E4B-A775-2704C7DFCBA8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Delegation Good Example", "Delegation Good Example\Delegation Good Example.csproj", "{E1FC448F-A725-49A2-AC19-64B06D7FAC66}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5CF85C97-01DE-4730-AFA4-29F8F79E4A16}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5CF85C97-01DE-4730-AFA4-29F8F79E4A16}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5CF85C97-01DE-4730-AFA4-29F8F79E4A16}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5CF85C97-01DE-4730-AFA4-29F8F79E4A16}.Release|Any CPU.Build.0 = Release|Any CPU
+		{632E0444-9272-4B52-B7DB-FDBC65785E07}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{632E0444-9272-4B52-B7DB-FDBC65785E07}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{632E0444-9272-4B52-B7DB-FDBC65785E07}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{632E0444-9272-4B52-B7DB-FDBC65785E07}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6370BA01-D09A-4B22-958D-EBECB81CFF0F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6370BA01-D09A-4B22-958D-EBECB81CFF0F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6370BA01-D09A-4B22-958D-EBECB81CFF0F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6370BA01-D09A-4B22-958D-EBECB81CFF0F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{09443EE7-CB73-4086-9730-2BCEF14439F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09443EE7-CB73-4086-9730-2BCEF14439F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09443EE7-CB73-4086-9730-2BCEF14439F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09443EE7-CB73-4086-9730-2BCEF14439F9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A5C32F97-EA62-4E4B-A775-2704C7DFCBA8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5C32F97-EA62-4E4B-A775-2704C7DFCBA8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5C32F97-EA62-4E4B-A775-2704C7DFCBA8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5C32F97-EA62-4E4B-A775-2704C7DFCBA8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E1FC448F-A725-49A2-AC19-64B06D7FAC66}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E1FC448F-A725-49A2-AC19-64B06D7FAC66}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E1FC448F-A725-49A2-AC19-64B06D7FAC66}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E1FC448F-A725-49A2-AC19-64B06D7FAC66}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AABC6063-2C3B-418A-8F3A-D2D19EBEBDB7}
+	EndGlobalSection
+EndGlobal

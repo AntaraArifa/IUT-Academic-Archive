@@ -1,0 +1,220 @@
+\doxysection{legacy.\+Library\+System Class Reference}
+\hypertarget{classlegacy_1_1_library_system}{}\label{classlegacy_1_1_library_system}\index{legacy.LibrarySystem@{legacy.LibrarySystem}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{classlegacy_1_1_library_system_aa3d0ff3f054091ec70beba8e6d31c034}{add\+Book}} (int id, String title, String author)
+\item 
+void \doxymbox{\hyperlink{classlegacy_1_1_library_system_a22a55f1709bced7c0085d94d600bdcef}{issue\+Book}} (int id)
+\item 
+void \doxymbox{\hyperlink{classlegacy_1_1_library_system_a1afb4a7b6d1a272ec81e55d50ece399a}{return\+Book}} (int id)
+\item 
+void \doxymbox{\hyperlink{classlegacy_1_1_library_system_a4069cde39cc72e696fdf7c9fc8d5bfb3}{search\+Book\+By\+Title}} (String title)
+\item 
+void \doxymbox{\hyperlink{classlegacy_1_1_library_system_a4cc9a543b3a69480d0d1b074a60fa809}{show\+All\+Books}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \doxymbox{\hyperlink{classlegacy_1_1_library_system_a4dffa3851d99dc05f15829448092f1bf}{main}} (String\+[$\,$]\+ args)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \doxymbox{\hyperlink{_library_system_8java_source_l00020}{20}} of file \doxymbox{\hyperlink{_library_system_8java_source}{Library\+System.\+java}}.
+
+
+
+\label{classlegacy_1_1_library_system_doc-func-members}
+\Hypertarget{classlegacy_1_1_library_system_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classlegacy_1_1_library_system_aa3d0ff3f054091ec70beba8e6d31c034}\index{legacy.LibrarySystem@{legacy.LibrarySystem}!addBook@{addBook}}
+\index{addBook@{addBook}!legacy.LibrarySystem@{legacy.LibrarySystem}}
+\doxysubsubsection{\texorpdfstring{addBook()}{addBook()}}
+{\footnotesize\ttfamily \label{classlegacy_1_1_library_system_aa3d0ff3f054091ec70beba8e6d31c034} 
+void legacy.\+Library\+System.\+add\+Book (\begin{DoxyParamCaption}\item[{int}]{id}{, }\item[{String}]{title}{, }\item[{String}]{author}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{_library_system_8java_source_l00023}{23}} of file \doxymbox{\hyperlink{_library_system_8java_source}{Library\+System.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ Book\ b\ =\ \textcolor{keyword}{new}\ Book(\textcolor{keywordtype}{id},\ title,\ author);}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ books.add(b);}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}Book\ added:\ "{}}\ +\ title);}
+\DoxyCodeLine{00027\ \ \ \ \ \}}
+
+\end{DoxyCode}
+Here is the caller graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlegacy_1_1_library_system_aa3d0ff3f054091ec70beba8e6d31c034_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classlegacy_1_1_library_system_a22a55f1709bced7c0085d94d600bdcef}\index{legacy.LibrarySystem@{legacy.LibrarySystem}!issueBook@{issueBook}}
+\index{issueBook@{issueBook}!legacy.LibrarySystem@{legacy.LibrarySystem}}
+\doxysubsubsection{\texorpdfstring{issueBook()}{issueBook()}}
+{\footnotesize\ttfamily \label{classlegacy_1_1_library_system_a22a55f1709bced7c0085d94d600bdcef} 
+void legacy.\+Library\+System.\+issue\+Book (\begin{DoxyParamCaption}\item[{int}]{id}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{_library_system_8java_source_l00029}{29}} of file \doxymbox{\hyperlink{_library_system_8java_source}{Library\+System.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (Book\ b\ :\ books)\ \{}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (b.id\ ==\ \textcolor{keywordtype}{id})\ \{}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (b.available\ ==\ \textcolor{keyword}{true})\ \{}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.available\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}Book\ issued:\ "{}}\ +\ b.title);}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}Book\ is\ not\ available"{}});}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00040\ \ \ \ \ \}}
+
+\end{DoxyCode}
+Here is the caller graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlegacy_1_1_library_system_a22a55f1709bced7c0085d94d600bdcef_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classlegacy_1_1_library_system_a4dffa3851d99dc05f15829448092f1bf}\index{legacy.LibrarySystem@{legacy.LibrarySystem}!main@{main}}
+\index{main@{main}!legacy.LibrarySystem@{legacy.LibrarySystem}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{classlegacy_1_1_library_system_a4dffa3851d99dc05f15829448092f1bf} 
+void legacy.\+Library\+System.\+main (\begin{DoxyParamCaption}\item[{String\+[$\,$]\+}]{args}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \doxymbox{\hyperlink{_library_system_8java_source_l00067}{67}} of file \doxymbox{\hyperlink{_library_system_8java_source}{Library\+System.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ LibrarySystem\ ls\ =\ \textcolor{keyword}{new}\ LibrarySystem();}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ ls.addBook(1,\ \textcolor{stringliteral}{"{}Software\ Maintenance"{}},\ \textcolor{stringliteral}{"{}Ian\ Sommerville"{}});}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ ls.addBook(2,\ \textcolor{stringliteral}{"{}Reverse\ Engineering"{}},\ \textcolor{stringliteral}{"{}Elliot\ Chikofsky"{}});}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ ls.addBook(3,\ \textcolor{stringliteral}{"{}Clean\ Code"{}},\ \textcolor{stringliteral}{"{}Robert\ Martin"{}});}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ ls.issueBook(1);}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ ls.returnBook(1);}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ ls.searchBookByTitle(\textcolor{stringliteral}{"{}Clean\ Code"{}});}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ ls.showAllBooks();}
+\DoxyCodeLine{00078\ \ \ \ \ \}}
+
+\end{DoxyCode}
+Here is the call graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlegacy_1_1_library_system_a4dffa3851d99dc05f15829448092f1bf_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classlegacy_1_1_library_system_a1afb4a7b6d1a272ec81e55d50ece399a}\index{legacy.LibrarySystem@{legacy.LibrarySystem}!returnBook@{returnBook}}
+\index{returnBook@{returnBook}!legacy.LibrarySystem@{legacy.LibrarySystem}}
+\doxysubsubsection{\texorpdfstring{returnBook()}{returnBook()}}
+{\footnotesize\ttfamily \label{classlegacy_1_1_library_system_a1afb4a7b6d1a272ec81e55d50ece399a} 
+void legacy.\+Library\+System.\+return\+Book (\begin{DoxyParamCaption}\item[{int}]{id}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{_library_system_8java_source_l00042}{42}} of file \doxymbox{\hyperlink{_library_system_8java_source}{Library\+System.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (Book\ b\ :\ books)\ \{}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (b.id\ ==\ \textcolor{keywordtype}{id})\ \{}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.available\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}Book\ returned:\ "{}}\ +\ b.title);}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00049\ \ \ \ \ \}}
+
+\end{DoxyCode}
+Here is the caller graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlegacy_1_1_library_system_a1afb4a7b6d1a272ec81e55d50ece399a_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classlegacy_1_1_library_system_a4069cde39cc72e696fdf7c9fc8d5bfb3}\index{legacy.LibrarySystem@{legacy.LibrarySystem}!searchBookByTitle@{searchBookByTitle}}
+\index{searchBookByTitle@{searchBookByTitle}!legacy.LibrarySystem@{legacy.LibrarySystem}}
+\doxysubsubsection{\texorpdfstring{searchBookByTitle()}{searchBookByTitle()}}
+{\footnotesize\ttfamily \label{classlegacy_1_1_library_system_a4069cde39cc72e696fdf7c9fc8d5bfb3} 
+void legacy.\+Library\+System.\+search\+Book\+By\+Title (\begin{DoxyParamCaption}\item[{String}]{title}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{_library_system_8java_source_l00051}{51}} of file \doxymbox{\hyperlink{_library_system_8java_source}{Library\+System.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (Book\ b\ :\ books)\ \{}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (b.title.equalsIgnoreCase(title))\ \{}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}Found\ book:\ "{}}\ +\ b.title\ +\ \textcolor{stringliteral}{"{}\ by\ "{}}\ +\ b.author);}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00057\ \ \ \ \ \}}
+
+\end{DoxyCode}
+Here is the caller graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlegacy_1_1_library_system_a4069cde39cc72e696fdf7c9fc8d5bfb3_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classlegacy_1_1_library_system_a4cc9a543b3a69480d0d1b074a60fa809}\index{legacy.LibrarySystem@{legacy.LibrarySystem}!showAllBooks@{showAllBooks}}
+\index{showAllBooks@{showAllBooks}!legacy.LibrarySystem@{legacy.LibrarySystem}}
+\doxysubsubsection{\texorpdfstring{showAllBooks()}{showAllBooks()}}
+{\footnotesize\ttfamily \label{classlegacy_1_1_library_system_a4cc9a543b3a69480d0d1b074a60fa809} 
+void legacy.\+Library\+System.\+show\+All\+Books (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{_library_system_8java_source_l00059}{59}} of file \doxymbox{\hyperlink{_library_system_8java_source}{Library\+System.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (Book\ b\ :\ books)\ \{}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \ \ \ \ System.out.println(}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b.id\ +\ \textcolor{stringliteral}{"{}\ |\ "{}}\ +\ b.title\ +\ \textcolor{stringliteral}{"{}\ |\ "{}}\ +\ b.author\ +\ \textcolor{stringliteral}{"{}\ |\ Available:\ "{}}\ +\ b.available}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00065\ \ \ \ \ \}}
+
+\end{DoxyCode}
+Here is the caller graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlegacy_1_1_library_system_a4cc9a543b3a69480d0d1b074a60fa809_icgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following file:\+\begin{DoxyCompactItemize}
+\item 
+src/\+legacy/\+\doxymbox{\hyperlink{_library_system_8java}{Library\+System.\+java}}\end{DoxyCompactItemize}

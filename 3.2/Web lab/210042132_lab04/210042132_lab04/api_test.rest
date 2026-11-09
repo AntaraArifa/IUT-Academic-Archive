@@ -1,0 +1,29 @@
+### ADD user
+POST http://localhost:3001/users
+Content-Type: application/json
+
+{
+    "name": "Farhan",
+    "email": "farhan@gmail.com",
+    "password": "farhan112",
+    "department": "CSE"
+}
+
+### GET all users
+GET http://localhost:3001/users
+
+
+### Put update user
+PUT http://localhost:3001/users/68762fef1bd493655ca79786
+Content-Type: application/json
+
+{
+    "name": "Farhan Abid",
+    "email": "farhan@gmail.com",
+    "password": "farhan112",
+    "department": "CSE"
+}
+
+### DELETE user
+DELETE http://localhost:3001/users/687631898832801253d81b14
+

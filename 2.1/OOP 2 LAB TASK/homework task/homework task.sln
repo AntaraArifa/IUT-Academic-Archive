@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33205.214
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "homework task", "homework task\homework task.csproj", "{797201AD-D668-4E3C-84C0-015BE121C87D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestProjectBottle", "TestProjectBottle\TestProjectBottle.csproj", "{2DA1680E-69C9-4321-99D9-9D9F66DD602C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{797201AD-D668-4E3C-84C0-015BE121C87D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{797201AD-D668-4E3C-84C0-015BE121C87D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{797201AD-D668-4E3C-84C0-015BE121C87D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{797201AD-D668-4E3C-84C0-015BE121C87D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2DA1680E-69C9-4321-99D9-9D9F66DD602C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2DA1680E-69C9-4321-99D9-9D9F66DD602C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2DA1680E-69C9-4321-99D9-9D9F66DD602C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2DA1680E-69C9-4321-99D9-9D9F66DD602C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EBBA3E5C-4B09-4A85-A444-B4B0F90BA7F2}
+	EndGlobalSection
+EndGlobal

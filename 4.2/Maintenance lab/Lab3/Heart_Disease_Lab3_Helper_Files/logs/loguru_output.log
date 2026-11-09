@@ -1,0 +1,74 @@
+2026-06-11 23:51:55 | INFO | Heart Disease Prediction project started
+2026-06-11 23:51:55 | INFO | Loading dataset
+2026-06-11 23:51:55 | SUCCESS | Dataset loaded successfully
+2026-06-11 23:51:55 | DEBUG | Dataset shape: (303, 14)
+2026-06-11 23:51:55 | DEBUG | Dataset columns: ['age', 'sex', 'cp', 'trestbps', 'chol', 'fbs', 'restecg', 'thalach', 'exang', 'oldpeak', 'slope', 'ca', 'thal', 'target']
+2026-06-11 23:51:55 | DEBUG | Missing values in dataset: 0
+2026-06-11 23:51:55 | DEBUG | Target value distribution: {1: 165, 0: 138}
+2026-06-11 23:51:55 | INFO | Preparing features and target variable
+2026-06-11 23:53:55 | INFO | Heart Disease Prediction project started
+2026-06-11 23:53:55 | INFO | Loading dataset
+2026-06-11 23:53:55 | SUCCESS | Dataset loaded successfully
+2026-06-11 23:53:55 | DEBUG | Dataset shape: (303, 14)
+2026-06-11 23:53:55 | DEBUG | Dataset columns: ['age', 'sex', 'cp', 'trestbps', 'chol', 'fbs', 'restecg', 'thalach', 'exang', 'oldpeak', 'slope', 'ca', 'thal', 'target']
+2026-06-11 23:53:55 | DEBUG | Missing values in dataset: 0
+2026-06-11 23:53:55 | DEBUG | Target value distribution: {1: 165, 0: 138}
+2026-06-11 23:53:55 | INFO | Preparing features and target variable
+2026-06-11 23:53:55 | DEBUG | Feature matrix shape: (303, 13)
+2026-06-11 23:53:55 | DEBUG | Target vector shape: (303,)
+2026-06-11 23:53:55 | INFO | Splitting dataset into training and testing data
+2026-06-11 23:53:55 | DEBUG | X_train shape: (242, 13)
+2026-06-11 23:53:55 | DEBUG | X_test shape: (61, 13)
+2026-06-11 23:53:55 | DEBUG | Y_train shape: (242,)
+2026-06-11 23:53:55 | DEBUG | Y_test shape: (61,)
+2026-06-11 23:53:55 | INFO | Training Logistic Regression model
+2026-06-11 23:53:55 | SUCCESS | Model training completed
+2026-06-11 23:53:55 | INFO | Evaluating model accuracy
+2026-06-11 23:53:55 | SUCCESS | Accuracy on training data: 0.8553719008264463
+2026-06-11 23:53:55 | SUCCESS | Accuracy on test data: 0.8032786885245902
+2026-06-11 23:53:55 | INFO | Final prediction result: The Person does not have a Heart Disease
+2026-06-11 23:53:55 | INFO | Heart Disease Prediction project completed
+2026-06-12 00:41:58 | INFO | Heart Disease Prediction project started
+2026-06-12 00:41:58 | INFO | Loading dataset
+2026-06-12 00:41:58 | SUCCESS | Dataset loaded successfully
+2026-06-12 00:41:58 | DEBUG | Dataset shape: (303, 14)
+2026-06-12 00:41:58 | DEBUG | Dataset columns: ['age', 'sex', 'cp', 'trestbps', 'chol', 'fbs', 'restecg', 'thalach', 'exang', 'oldpeak', 'slope', 'ca', 'thal', 'target']
+2026-06-12 00:41:58 | DEBUG | Missing values in dataset: 0
+2026-06-12 00:41:58 | DEBUG | Target value distribution: {1: 165, 0: 138}
+2026-06-12 00:41:58 | INFO | Preparing features and target variable
+2026-06-12 00:41:58 | DEBUG | Feature matrix shape: (303, 13)
+2026-06-12 00:41:58 | DEBUG | Target vector shape: (303,)
+2026-06-12 00:41:58 | INFO | Splitting dataset into training and testing data
+2026-06-12 00:41:58 | DEBUG | X_train shape: (242, 13)
+2026-06-12 00:41:58 | DEBUG | X_test shape: (61, 13)
+2026-06-12 00:41:58 | DEBUG | Y_train shape: (242,)
+2026-06-12 00:41:58 | DEBUG | Y_test shape: (61,)
+2026-06-12 00:41:58 | INFO | Training Logistic Regression model
+2026-06-12 00:41:58 | SUCCESS | Model training completed
+2026-06-12 00:41:58 | INFO | Evaluating model accuracy
+2026-06-12 00:41:58 | SUCCESS | Accuracy on training data: 0.8553719008264463
+2026-06-12 00:41:58 | SUCCESS | Accuracy on test data: 0.8032786885245902
+2026-06-12 00:41:58 | INFO | Final prediction result: The Person does not have a Heart Disease
+2026-06-12 00:41:58 | INFO | Heart Disease Prediction project completed
+2026-06-12 00:48:49 | INFO | Heart Disease Prediction project started
+2026-06-12 00:48:49 | INFO | Loading dataset
+2026-06-12 00:48:49 | SUCCESS | Dataset loaded successfully
+2026-06-12 00:48:49 | DEBUG | Dataset shape: (303, 14)
+2026-06-12 00:48:49 | DEBUG | Dataset columns: ['age', 'sex', 'cp', 'trestbps', 'chol', 'fbs', 'restecg', 'thalach', 'exang', 'oldpeak', 'slope', 'ca', 'thal', 'target']
+2026-06-12 00:48:49 | DEBUG | Missing values in dataset: 0
+2026-06-12 00:48:49 | DEBUG | Target value distribution: {1: 165, 0: 138}
+2026-06-12 00:48:49 | INFO | Preparing features and target variable
+2026-06-12 00:48:49 | DEBUG | Feature matrix shape: (303, 13)
+2026-06-12 00:48:49 | DEBUG | Target vector shape: (303,)
+2026-06-12 00:48:49 | INFO | Splitting dataset into training and testing data
+2026-06-12 00:48:49 | DEBUG | X_train shape: (242, 13)
+2026-06-12 00:48:49 | DEBUG | X_test shape: (61, 13)
+2026-06-12 00:48:49 | DEBUG | Y_train shape: (242,)
+2026-06-12 00:48:49 | DEBUG | Y_test shape: (61,)
+2026-06-12 00:48:49 | INFO | Training Logistic Regression model
+2026-06-12 00:48:50 | SUCCESS | Model training completed
+2026-06-12 00:48:50 | INFO | Evaluating model accuracy
+2026-06-12 00:48:50 | SUCCESS | Accuracy on training data: 0.8553719008264463
+2026-06-12 00:48:50 | SUCCESS | Accuracy on test data: 0.8032786885245902
+2026-06-12 00:48:50 | INFO | Final prediction result: The Person does not have a Heart Disease
+2026-06-12 00:48:50 | INFO | Heart Disease Prediction project completed
